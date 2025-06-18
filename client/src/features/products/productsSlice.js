@@ -5,7 +5,7 @@ export const fetchProducts = createAsyncThunk(
   "/products/fetchProducts",
   async () => {
     const response = await axios.get(
-      "https://major-project-1-phi.vercel.app/products"
+      "https://e-commerce-project-server-six.vercel.app/products"
     );
 
     return response.data;
@@ -69,7 +69,7 @@ export const updateProductStockAsync = createAsyncThunk(
     console.log("check stock", cart);
     try {
       const response = await axios.post(
-        "https://major-project-1-phi.vercel.app/products/productStockDecrement",
+        "https://e-commerce-project-server-six.vercel.app/products/productStockDecrement",
         cart,
         {
           headers: {

@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const fetchUsers = createAsyncThunk("/users/fetchUsers", async () => {
   const response = await axios.get(
-    "https://major-project-1-phi.vercel.app/users"
+    "https://e-commerce-project-server-six.vercel.app/users"
   );
 
   return response.data;
@@ -163,7 +163,7 @@ export const moveToWishlistAsync = createAsyncThunk(
 
       if (isUserLoggedIn) {
         const response = await axios.post(
-          `https://major-project-1-phi.vercel.app/users/${loggedInUser._id}/wishlist`,
+          `https://e-commerce-project-server-six.vercel.app/users/${loggedInUser._id}/wishlist`,
           productData,
           {
             headers: {
@@ -188,7 +188,7 @@ export const pushLoggedInUserDataAsync = createAsyncThunk(
   (userData, thunkAPI) => {
     const { token } = userData;
     axios
-      .post(`https://major-project-1-phi.vercel.app/users/loggedIn`, userData, {
+      .post(`https://e-commerce-project-server-six.vercel.app/users/loggedIn`, userData, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
@@ -209,7 +209,7 @@ export const updateWishlistAsync = createAsyncThunk(
 
       if (isUserLoggedIn) {
         const response = await axios.post(
-          `https://major-project-1-phi.vercel.app/users/${loggedInUser._id}/wishlist`,
+          `https://e-commerce-project-server-six.vercel.app/users/${loggedInUser._id}/wishlist`,
           product,
           {
             headers: {
@@ -237,7 +237,7 @@ export const addToCartAsync = createAsyncThunk(
 
       if (isUserLoggedIn) {
         const response = await axios.post(
-          `http://localhost:8000/users/${loggedInUser._id}/cart`,
+          `https://e-commerce-project-server-six.vercel.app/users/${loggedInUser._id}/cart`,
           productData,
           {
             headers: {
@@ -265,7 +265,7 @@ export const removeFromCartAsync = createAsyncThunk(
 
       if (isUserLoggedIn) {
         const response = await axios.delete(
-          `https://major-project-1-phi.vercel.app/users/${loggedInUser._id}/cart`,
+          `https://e-commerce-project-server-six.vercel.app/users/${loggedInUser._id}/cart`,
           {
             data: productData,
             headers: {
@@ -292,7 +292,7 @@ export const quantityIncrementAsync = createAsyncThunk(
 
       if (isUserLoggedIn) {
         const response = await axios.post(
-          `https://major-project-1-phi.vercel.app/users/${loggedInUser._id}/cart/increment`,
+          `https://e-commerce-project-server-six.vercel.app/users/${loggedInUser._id}/cart/increment`,
           productData,
           {
             headers: {
@@ -320,7 +320,7 @@ export const quantityDecrementAsync = createAsyncThunk(
 
       if (isUserLoggedIn) {
         const response = await axios.post(
-          `https://major-project-1-phi.vercel.app/users/${loggedInUser._id}/cart/decrement`,
+          `https://e-commerce-project-server-six.vercel.app/users/${loggedInUser._id}/cart/decrement`,
           productData,
           {
             headers: {
@@ -345,7 +345,7 @@ export const addNewUserAsync = createAsyncThunk(
   async (newUser, thunkAPI) => {
     try {
       const response = await axios.post(
-        "https://major-project-1-phi.vercel.app/users",
+        "https://e-commerce-project-server-six.vercel.app/users",
         newUser,
         {
           headers: {
@@ -369,7 +369,7 @@ export const updateUserDataAsync = createAsyncThunk(
       const { loggedInUser } = thunkAPI.getState().users;
 
       const response = await axios.post(
-        `https://major-project-1-phi.vercel.app/users/${loggedInUser._id}`,
+        `https://e-commerce-project-server-six.vercel.app/users/${loggedInUser._id}`,
         userData,
         {
           headers: {
@@ -393,7 +393,7 @@ export const clearCartAsync = createAsyncThunk(
       const { loggedInUser } = thunkAPI.getState().users;
 
       const response = await axios.post(
-        `https://major-project-1-phi.vercel.app/users/${loggedInUser._id}/cart/clear`,{},
+        `https://e-commerce-project-server-six.vercel.app/users/${loggedInUser._id}/cart/clear`,{},
         {
           headers: {
             "Content-Type": "application/json",

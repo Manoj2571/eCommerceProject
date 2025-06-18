@@ -205,7 +205,7 @@ const Cart = () => {
                           </button>
                           <button
                             className="btn border-dark rounded-0 px-4"
-                            onClick={moveToWishlistHandler(cartProduct)}
+                            onClick={() => moveToWishlistHandler(cartProduct)}
                           >
                             Move to Wishlist
                           </button>

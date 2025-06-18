@@ -4,7 +4,7 @@ import { clearCartAsync } from "../users/usersSlice";
 
 export const fetchOrders = createAsyncThunk("orders/fetchOrders", async () => {
   const response = await axios.get(
-    "https://major-project-1-phi.vercel.app/orders"
+    "https://e-commerce-project-server-six.vercel.app/orders"
   );
 
   return response.data;
@@ -56,7 +56,7 @@ export const addOrderAsync = createAsyncThunk(
   async (order, thunkAPI) => {
     try {
       const response = await axios.post(
-        "https://major-project-1-phi.vercel.app/orders",
+        "https://e-commerce-project-server-six.vercel.app/orders",
         order,
         {
           headers: {

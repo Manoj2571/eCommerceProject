@@ -4,7 +4,7 @@ import axios from "axios";
 export const fetchAddresses = createAsyncThunk(
   "/addresses/fetchAddresses",
   async () => {
-    const response = await axios.get(`https://major-project-1-phi.vercel.app/addresses`);
+    const response = await axios.get(`https://e-commerce-project-server-six.vercel.app/addresses`);
 
     return response.data;
   }
@@ -62,7 +62,7 @@ export const addAddressAsync = createAsyncThunk(
   async (address, thunkAPI) => {
     try {
       const response = await axios.post(
-        "https://major-project-1-phi.vercel.app/addresses",
+        "https://e-commerce-project-server-six.vercel.app/addresses",
         address,
         {
           headers: {
@@ -86,7 +86,7 @@ export const updateAddressAsync = createAsyncThunk(
 
     try {
       const response = await axios.post(
-        `https://major-project-1-phi.vercel.app/addresses/${addressId}`,
+        `https://e-commerce-project-server-six.vercel.app/addresses/${addressId}`,
         address,
         {
           headers: {
@@ -108,7 +108,7 @@ export const deleteAddressAsync = createAsyncThunk(
   async (address, thunkAPI) => {
     try {
       const response = await axios.delete(
-        `https://major-project-1-phi.vercel.app/addresses/${address._id}`
+        `https://e-commerce-project-server-six.vercel.app/addresses/${address._id}`
       );
 
       const data = await response.data;

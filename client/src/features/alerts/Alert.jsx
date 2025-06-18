@@ -12,7 +12,7 @@ const Alert = () => {
 
   return (
     <div className="container">
-      {alertMessage && <div className="col-md-4 popup">{alertMessage}</div>}
+      {alertMessage && <div className="popup">{alertMessage}</div>}
     </div>
   );
 };

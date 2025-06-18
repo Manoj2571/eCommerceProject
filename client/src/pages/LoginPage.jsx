@@ -28,7 +28,7 @@ const LoginPage = () => {
 
     axios
       .post(
-        "https://major-project-1-phi.vercel.app/login",
+        "https://e-commerce-project-server-six.vercel.app/login",
         {
           email,
           password,

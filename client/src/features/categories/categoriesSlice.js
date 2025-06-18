@@ -5,7 +5,7 @@ export const fetchCategories = createAsyncThunk(
   "categories/fetchCategories",
   async () => {
     const response = await axios.get(
-      "https://major-project-1-phi.vercel.app/categories"
+      "https://e-commerce-project-server-six.vercel.app/categories"
     );
 
     return response.data;
