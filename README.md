@@ -6,7 +6,7 @@ A full-featured eCommerce web application to browse products, manage cart and wi
 
 ## Demo Link
 
-[Live Demo](https://my-recipe-organizer.com)  
+[Live Demo](https://e-commerce-project-fawn-sigma.vercel.app/)  
 
 ---
 
@@ -44,6 +44,10 @@ cd ../client && npm start
 - Express
 - MongoDB
 - JWT
+
+## Demo Video
+Watch a walkthrough (5–7 minutes) of all major features of this app :
+[Demo Video Link](https://youtu.be/B7x6Z6JMlmk)
 
 ## Features
 **Product Listing**
